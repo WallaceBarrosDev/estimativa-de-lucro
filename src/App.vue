@@ -4,7 +4,7 @@
       <h1>Estimativa de lucro</h1>
 
       <div class="form-group">
-        <label>Capital investido (R$)</label>
+        <label>Capital investido</label>
         <input v-model.number="capital" type="number" placeholder="Ex: 400" />
       </div>
 
@@ -14,7 +14,7 @@
       </div>
 
       <div class="form-group">
-        <label>Preço de venda (R$)</label>
+        <label>Preço de venda</label>
         <input v-model.number="precoVenda" type="number" placeholder="Ex: 7.50" />
       </div>
 
