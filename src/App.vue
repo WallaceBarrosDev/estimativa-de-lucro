@@ -15,7 +15,7 @@
 
       <div class="form-group">
         <label>Preço de venda</label>
-        <input v-model.number="precoVenda" type="number" placeholder="Ex: 7.50" />
+        <input v-model.number="precoVenda" type="number" placeholder="Ex: 100" />
       </div>
 
       <div class="results">
