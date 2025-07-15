@@ -41,6 +41,7 @@ import {
   LinearScale,
   Tooltip,
 } from 'chart.js'
+//rebase
 
 Chart.register(BarController, BarElement, CategoryScale, LinearScale, Tooltip)
 
