@@ -1,8 +1,16 @@
 <template>
-    <button :class="option">Botão</button>
+    <button :class="option">
+        <slot />
+        <p v-if="slotsVoid">Botão</p>
+    </button>
 </template>
 
 <script lang="ts" setup>
+import { useSlots } from 'vue';
+
+const slots = useSlots()
+const slotsVoid = !slots.default || slots.default().length === 0;
+
 const { option } = defineProps<{
     option?:ButtonOptions
 }>();
