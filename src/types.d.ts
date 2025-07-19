@@ -1,0 +1,1 @@
+type ButtonOptions = 'normal' | 'cancel'

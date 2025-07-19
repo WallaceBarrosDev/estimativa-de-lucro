@@ -1,6 +1,13 @@
 <template>
-    <button>Botão</button> 
+    <button :class="option">Botão</button>
 </template>
+
+<script lang="ts" setup>
+const { option } = defineProps<{
+    option?:ButtonOptions
+}>();
+
+</script>
 
 <style scoped>
     button {
@@ -14,5 +21,21 @@
     button:hover {
         background-color: #5CF83D;
         box-shadow: 2px 2px 7px #000000ff;
+    }
+
+    .normal {
+        background-color: #84FF6C;
+
+        &:hover {
+            background-color: #5CF83D;
+        }
+    }
+
+    .cancel {
+        background-color: #FF6C6C;
+
+        &:hover {
+            background-color: #FF5353;
+        }
     }
 </style>
