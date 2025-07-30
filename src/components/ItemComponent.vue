@@ -87,11 +87,10 @@ const {price, weight, amount } = defineProps<ProductAttributes>()
 
     button {
         background-color: transparent;
-        transition: 300ms;
+        transition: 200ms;
         padding: 0;
         width: 25px;
         height: 25px;
-        transition:  500ms;
     }
 
     .edit {
