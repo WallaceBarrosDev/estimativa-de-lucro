@@ -4,9 +4,10 @@
             <p v-if="slotVoid">Meu Item</p>
             <p v-else><slot/></p>
             
-            <small>R$ 20,00</small>
-            <small>2 kg</small>
+            <small>R$ {{ price }}</small>
+            <small>{{ weight }} kg</small>
         </div>
+        <div class="amount">{{ amount }}</div>
         <div>
             <button class="edit">E</button>
             <button class="delet">D</button>
@@ -16,10 +17,12 @@
 
 <script lang="ts" setup>
 import { useSlots } from 'vue';
+import type { ProductAttributes } from '../types';
 
 const slot = useSlots()
 const slotVoid = !slot.default || slot.default().length === 0
 
+const {price, weight, amount } = defineProps<ProductAttributes>()
 </script>
 
 <style scoped>
@@ -30,6 +33,12 @@ const slotVoid = !slot.default || slot.default().length === 0
         justify-content: center;
         border-top: 1px solid #b1b1b1;
         border-bottom: 1px solid #b1b1b1;
+        position: relative;
+        box-sizing: border-box;
+
+        &:not(:first-child) {
+            border-top: none;
+        }
     }
 
     div {
@@ -43,6 +52,13 @@ const slotVoid = !slot.default || slot.default().length === 0
         flex-wrap: wrap;
     }
 
+    div:last-child {
+        display: flex;
+        width: 70px;
+        justify-content: center;
+        gap: 4px;
+    }
+
     small {
         font-size: 0.5rem;
         
@@ -51,11 +67,22 @@ const slotVoid = !slot.default || slot.default().length === 0
         }
     }
 
-    div:last-child {
+    .amount {
+        position: absolute;
+        font-size: xx-small;
+        border-radius: 50%;
+        border: 1px solid #b1b1b1;
+        background-color: #fff;
+        width: 15px;
+        height: 15px;
         display: flex;
-        width: 70px;
+        align-items: center;
         justify-content: center;
-        gap: 4px;
+
+        top: 0;
+        right: 0;
+
+        transform: translate(50%, calc(-50% - 1px));
     }
 
     button {
@@ -64,19 +91,22 @@ const slotVoid = !slot.default || slot.default().length === 0
         padding: 0;
         width: 25px;
         height: 25px;
+        transition:  500ms;
     }
 
     .edit {
         border: 1px solid #84FF6C;
         &:hover {
-            border-color: #5CF83D;
+            border: 1.24px solid #5CF83D;
+            font-size: 1.04rem;
         }
     }
 
     .delet {
         border: 1px solid #FF6C6C;
         &:hover {
-            border-color: #FF5353;
+            border: 1.24px solid #FF5353;
+            font-size: 1.04rem;
         }
     }
 </style>
