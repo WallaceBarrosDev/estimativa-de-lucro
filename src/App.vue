@@ -1,8 +1,9 @@
 <template>
-  <h1>Hello world</h1>
+  <HomeLayout/>
 </template>
 
 <script setup lang="ts">
+import HomeLayout from './layout/HomeLayout.vue';
 </script>
 
 <style scoped>

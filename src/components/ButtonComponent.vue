@@ -7,6 +7,7 @@
 
 <script lang="ts" setup>
 import { useSlots } from 'vue';
+import type { ButtonOptions } from '../types';
 
 const slots = useSlots()
 const slotsVoid = !slots.default || slots.default().length === 0;
