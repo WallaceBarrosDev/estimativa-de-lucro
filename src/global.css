@@ -1,16 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', Times, serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: #3F3F3F;
 }
 
 a {
@@ -33,6 +38,12 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+h3 {
+  font-size: 2.2em;
+  font-weight: 400;
+  line-height: 0.75em;
 }
 
 button {
@@ -59,9 +70,7 @@ button:focus-visible {
 }
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100vw;
   text-align: center;
 }
 

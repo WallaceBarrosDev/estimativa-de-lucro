@@ -1,5 +1,34 @@
-# Vue 3 + TypeScript + Vite
+# Estimativa de Lurco APP
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Como contirbuir
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+1. Copie a banch development, não use a branch main
+
+``` zsh
+git clone --single-branch --branch development https://github.com/WallaceBarrosDev/estimativa-de-lucro.git
+```
+
+2. Entre na pasta do projeto
+``` zsh
+cd estimativa-de-lucro
+```
+
+3. Crie uma nova branch para alteração desejada seguindo o mdelo:
+``` zsh
+git checkout -b nome_da_branch-tipo-da-branch
+```
+
+4. Tipos de branch
+
+- feature = nova funcionalidade
+- fix = coreção de bugs
+
+Exemplo:
+``` zsh
+git cehckout -b componet_botton-feature
+```
+
+5. Envie a nova branch quando tudo estiver pronto
+``` zsh
+git push -u origin componet_button-feature
+```
